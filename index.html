@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World News</title>
+    <link rel="icon" type="image/x-icon" href="./media/myFavicon.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/3c78ab287f.js" crossorigin="anonymous"></script>
+    <script src="./js/app.js" type="module" defer></script>
+    <script src="./js/data.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <ul class="navbar">
+            <li id="logo"><img src="./media/logo.png" alt="logo" width="200"></li>
+            <li>
+                <a href="index.html">Home</a>
+                <div id="current-page"></div>
+            </li>
+            <li><a href="./html/politics.html">Politics</a></li>
+            <li><a href="./html/business.html">Business</a></li>
+            <li><a href="./html/tech.html">Tech</a></li>
+            <li><a href="./html/climate.html">Climate</a></li>
+            <button id="nav-button"><i class="fa fa-bars"></i></button>
+        </ul>
+    </header>
+    <div id="selectedArticle">
+        <div>
+            <button id="back"><i class="fa-sharp fa-solid fa-arrow-left"></i></button>
+            <h1 id="currentTitle">Title</h1>
+        </div>
+        <h3 id="currentAuthor"></h3>
+        <h4 id="currentDate"></h4>
+        <img src="" alt="picture" id="currentImage">
+        <p id="currentArticleText"></p>
+    </div>
+    <div id="container">
+        <aside>
+            <h3>Filter by</h3>
+            <h4>Date</h4>
+            <form id="dateForm">
+                <input type="radio" id="newest" name="sortByDate" value="newest" checked>
+                <label for="newest">Newest</label><br>
+                <input type="radio" id="oldest" name="sortByDate" value="oldest">
+                <label for="oldest">Oldest</label><br>
+            </form>
+            <h4>author</h4>
+            <form id="authorForm">
+                <input type="checkbox" id="name1" name="Abby Hill" value="name1">
+                <label for="name1">Abby Hill</label><br>
+                <input type="checkbox" id="name2" name="Nicholas Rhodes" value="name2">
+                <label for="name2">Nicholas Rhodes</label><br>
+                <input type="checkbox" id="name2" name="Faisal Steele" value="name2">
+                <label for="name3">Faisal Steele</label><br>
+                <input type="checkbox" id="name2" name="Samara Ho" value="name2">
+                <label for="name4">Samara Ho</label><br>
+            </form>
+        </aside>
+        <main>
+            <article class="article">
+                <img src="" alt="picture" class="myImage">
+                <div>
+                    <h2 class="title"></h2>
+                    <p class="author"></p>
+                    <p class="date"></p>
+                    <p class="articleText"></p>
+                </div>
+            </article>
+            <article class="article">
+                <img src="" alt="picture" class="myImage">
+                <div>
+                    <h2 class="title"></h2>
+                    <p class="author"></p>
+                    <p class="date"></p>
+                    <p class="articleText"></p>
+                </div>
+            </article>
+            <article class="article">
+                <img src="" alt="picture" class="myImage">
+                <div>
+                    <h2 class="title"></h2>
+                    <p class="author"></p>
+                    <p class="date"></p>
+                    <p class="articleText"></p>
+                </div>
+            </article>
+            <article class="article">
+                <img src="" alt="picture" class="myImage">
+                <div>
+                    <h2 class="title"></h2>
+                    <p class="author"></p>
+                    <p class="date"></p>
+                    <p class="articleText"></p>
+                </div>
+            </article>
+            <article class="article">
+                <img src="" alt="picture" class="myImage">
+                <div>
+                    <h2 class="title"></h2>
+                    <p class="author"></p>
+                    <p class="date"></p>
+                    <p class="articleText"></p>
+                </div>
+            </article>
+            <article class="article">
+                <img src="" alt="picture" class="myImage">
+                <div>
+                    <h2 class="title"></h2>
+                    <p class="author"></p>
+                    <p class="date"></p>
+                    <p class="articleText"></p>
+                </div>
+            </article>
+            <article class="article">
+                <img src="" alt="picture" class="myImage">
+                <div>
+                    <h2 class="title"></h2>
+                    <p class="author"></p>
+                    <p class="date"></p>
+                    <p class="articleText"></p>
+                </div>
+            </article>
+            <article class="article">
+                <img src="" alt="picture" class="myImage">
+                <div>
+                    <h2 class="title"></h2>
+                    <p class="author"></p>
+                    <p class="date"></p>
+                    <p class="articleText"></p>
+                </div>
+            </article>
+        </main>
+    </div>
+    <footer id="footer">
+        <p>@2023 World News Network</p>
+        <p>WNN is not responsible for the content of external sites</p>
+        <p>All Rights Reserved</p>
+    </footer>
+</body>
+</html>
