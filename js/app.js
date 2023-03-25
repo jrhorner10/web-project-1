@@ -1,5 +1,6 @@
 import {article, myData} from './data.js'
 
+// All necessary imports
 const navbar = document.querySelectorAll("ul.navbar li");
 const navbarButton = document.getElementById("nav-button");
 const articles = document.getElementsByClassName("article");
@@ -24,6 +25,8 @@ const currentArticleText = document.getElementById("currentArticleText");
 
 //initial get request from backend, 
 
+// When an article is clicked, use display none for everything on front page between header and footer, and show selectedArticle
+// Add event listeners for all the articles (8) and appropriate data that should be filled in when clicked.
 for (let i=0; i < articles.length; i++) {
     articles[i].addEventListener("click", () => {
         allArticles.style.display = 'none';
@@ -42,6 +45,7 @@ back.addEventListener("click", () => {
     allArticles.style.display = 'flex';
 })
 
+// When screen is below 600, allow navbar button to expand/shrink navbar view
 navbarButton.addEventListener("click", () => {
     if (navbar[0].className.trim().length === 0) {
         for (x of navbar) {
@@ -56,6 +60,7 @@ navbarButton.addEventListener("click", () => {
     }
 });
 
+// initially sort data so newest data shows first by changing order of myData array
 myData.sort((a, b) => {
     if (a.date < b.date) {
         return 1;
@@ -66,14 +71,8 @@ myData.sort((a, b) => {
     return 0;
 })
 
-function formatDate(myDate) {
-    let year = myDate.getFullYear();
-    let month = myDate.getMonth() + 1;
-    let day = myDate.getYear();
-}
-
-console.log(myData[0].image);
-
+// Update the content on main page by iterating through myData, and filling in all content on the dom in the articles
+// (image, title, author, date, and text of article)
 function updateContent() {
     for (let i=0; i < titles.length; i++) {
         images[i].setAttribute("src", myData[i].image);
@@ -86,6 +85,8 @@ function updateContent() {
 
 updateContent();
 
+// Allows functionality of sorting data by newest or oldest. These two event listeners check for a click on the
+// radio buttons, and based on the value it recieves, will sort them by date
 dateForm.addEventListener("click", () => {
     let selectedButton = dateForm.querySelector('input[name=sortByDate]:checked');
     if (selectedButton.value == 'newest') {

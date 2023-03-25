@@ -1,3 +1,4 @@
+// The class to hold the article data
 class article {
     constructor(image, title, author, date, text) {
         this.image = image;
@@ -8,6 +9,7 @@ class article {
     }
 }
 
+// The text content of the 8 artles
 let articleContent = [
     `Ignorant branched humanity led now marianne too strongly entrance. Rose to shew bore no ye of paid rent form. Old design are dinner better nearer silent excuse. She which are maids boy sense her shade. Considered reasonable we affronting on expression in. So cordial anxious mr delight. Shot his has must wish from sell nay. Remark fat set why are sudden depend change entire wanted. Performed remainder attending led fat residence far
 
@@ -120,6 +122,7 @@ let articleContent = [
     Entire any had depend and figure winter. Change stairs and men likely wisdom new happen piqued six. Now taken him timed sex world get. Enjoyed married an feeling delight pursuit as offered. As admire roused length likely played pretty to no. Means had joy miles her merry solid order.`
 ]
 
+// An array of article object references containing all the data related to them
 let myData = [
     new article("../media/image1.jpeg", 'The Ultimate Mountian Checklist', 'Nicholas Rhodes', new Date(2022, 11, 5), articleContent[0]),
     new article("../media/image2.jpeg", 'The Lazy Way To TRAVEL', 'Abby Hill', new Date(2021, 8, 7), articleContent[1]),

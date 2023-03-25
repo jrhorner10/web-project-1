@@ -16,90 +16,94 @@ ul.navbar {
   padding: 0;
   margin: 0;
 }
-  
-  ul.navbar li#logo {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  ul.navbar li#logo img {
-    height: 50px;
-    vertical-align: middle;
-  }
-  
+
+ul.navbar li#logo {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+ul.navbar li#logo img {
+  height: 50px;
+  vertical-align: middle;
+}
+
+/* Use inline blocks so they stack sideways */
 ul.navbar li {
-    display: inline-block;
-    margin-right: 0;
-  }
+  display: inline-block;
+  margin-right: 0;
+}
 
-  ul.navbar li.smallScreen {
-    display: block;
-  }
-  
-  ul.navbar li a {
-    color: white;
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 50px;
-    padding: 0 10px;
-  }
-  
-  ul.navbar li a.active {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  ul.navbar li:hover {
-    background-color: #595959;
-  }
-  
-  ul.navbar li:hover {
-    background-color: #595959;
-  }
+ul.navbar li.smallScreen {
+  display: block;
+}
 
+/* style the links on navbar */
+ul.navbar li a {
+  color: white;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 50px;
+  padding: 0 10px;
+}
+
+ul.navbar li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+ul.navbar li:hover {
+  background-color: #595959;
+}
+
+ul.navbar li:hover {
+  background-color: #595959;
+}
+
+#nav-button {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+#nav-button {
+  display: none;
+}
+
+/* make navbar verticle for screens smaller than 600 by changing display to block */
+@media screen and (max-width: 600px) {
   #nav-button {
-    position: absolute;
-    top: 15px;
-    right: 10px;
+      display: block;
   }
 
-  #nav-button {
-    display: none;
+  ul.navbar li {
+      display: none;
   }
+}
 
-  @media screen and (max-width: 600px) {
-    #nav-button {
-        display: block;
-    }
+#current-page {
+  background-color: #5fc562;
+  width: 100%;
+  bottom: 0;
+  height: 6px;
+}
 
-    ul.navbar li {
-        display: none;
-    }
-  }
-
-  #current-page {
-    background-color: #5fc562;
-    width: 100%;
-    bottom: 0;
-    height: 6px;
-  }
-  
-  footer {
-    position: relative;
-    background-color: #121212;
-  }
+footer {
+  position: relative;
+  background-color: #121212;
+}
 
 footer p {
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
 
+/* this container holds the content when viewing the main page not clicking on article */
 #container {
     display: flex;
     flex-direction: row;
@@ -128,12 +132,15 @@ header {
     margin: 0;
 }
 
+/* using flex for proper positioning of sidebar */
 main {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
+/* These are the self contained articles, and I set slight background color around them */
+/* They are made clickable in javascript */
 article {
   background-color: #d8d8d8;
   height: 100%;
@@ -147,6 +154,7 @@ article:first-child {
   margin-top: 10px;
 }
 
+/* Center article image on left side of article field */
 article img {
   width: 120px;
   height: 120px;
@@ -156,6 +164,7 @@ article img {
   object-fit: cover;
 }
 
+/* Allow for text overflow so that it only shows the first portion of the main text in the article */
 article div {
   margin: 15px;
   max-height: 120px;
@@ -188,6 +197,7 @@ aside h4 {
   text-align: center;
 }
 
+/* This is hidden until user clicks on an article. Javascript will then hide the content between header and footer */
 #selectedArticle {
   padding-top: 56px;
   display: none;
